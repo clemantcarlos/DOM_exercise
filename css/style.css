@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+:root{
+    --main-color:#FCD618;
+    --second-color:#222;
+    --main-modal-color:rgba(247,222,30,0.85);
+    --second-modal-color:rgba(34,34,34,0.85);
+    --container-width:1200px;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    padding-top: 10vh;
+    overflow-x: hidden;
+}
+header{
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 10vh;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+header>h1{
+    font-size: 2em;
+}
+.section-body{
+    padding: 2em;
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+}
+.section-body>h2{
+    font-size: 24px;
+}
+.hamburger{
+    position: fixed;
+    z-index: 999;
+    right: 1vh;
+    bottom: 1vh;
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    
+}
+.clickable:hover{
+    cursor: pointer;
+}
+.panel{
+    transform: translate(0,-100%);
+    width: 100%;
+    height: 100vh;
+    background-color: var(--second-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    z-index: 998;
+    transition: transform .3s ease;
+    top: 0;
+    padding: 9em 0;
+}
+.menu{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.menu>a{
+    padding: 1.5em 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    list-style: none;
+    font-weight: 800;
+    color: var(--main-color);
+    font-size: 1.6em;
+    text-decoration: none;
+}
+.menu>a:hover{
+    cursor: pointer;
+    background-color: var(--main-color);
+    color: var(--second-color);
+}
+.is-active{
+    transform: translate(0,0);
+}
+.btn_clock{
+    background-color: var(--main-color);
+    border: 1px solid var(--second-color);
+    font-weight: 600;
+    padding: .5em 1em;
+    margin-top: .5em;
+    border-radius: 50px;
+}
+.btn_clock:hover{
+    cursor: pointer;
+}
+#section1{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#clock{
+    margin-top: .5em;
+    font-size: 2em;
+    font-weight: 400;
+}
