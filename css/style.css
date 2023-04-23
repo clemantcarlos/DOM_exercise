@@ -39,19 +39,30 @@ header{
 header>h1{
     font-size: 2em;
 }
-.hamburger{
+.btn-fixed{
     position: fixed;
     z-index: 999;
-    right: 1vh;
-    bottom: 1vh;
+    z-index: 999;
     height: 4.5rem;
     width: 4.5rem;
-    border-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--main-color);
-    
+    border-radius: 50px;
+    border: 0;
+}
+#btn_upScroll{
+    display: none;
+    right: 10vw;
+    bottom: 1vh;
+}
+#btn_upScroll>i{
+    font-size: 2em;
+}
+.hamburger{
+    right: 1vh;
+    bottom: 1vh;
 }
 /* sections */
 .section-body{
