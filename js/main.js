@@ -6,6 +6,7 @@ import upScroll from "./up_scrolling.js"
 import themeChanger from "./theme_changer.js"
 import responsiveMedia from "./object_responsive.js"
 import responsiveTester from "./responsive_tester.js"
+import userDeviceInfo from "./device_detection.js"
 
 $(document).ready(()=>{
     
@@ -47,13 +48,8 @@ $(document).ready(()=>{
         `<a href='https://goo.gl/maps/kndwjbEUbnWZCD7q6'>Ver Monumento</a>`,
         `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15737.793295288504!2d-69.21623207269954!3d9.556565840495619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e7dc16b26aa92f5%3A0xcf62f3708f6caa3f!2sMonumento%20La%20Espiga!5e0!3m2!1ses-419!2sve!4v1682468167197!5m2!1ses-419!2sve" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`
     );
-    responsiveTester(
-        `#in_url`,
-        `#in_width`,
-        `#in_height`,
-        '#btn_openTester',
-        '#btn_closeTester'
-    );
+    responsiveTester('#tester-form');
+    userDeviceInfo('#user-device')
 })
 
 $(document).keydown((e)=>{
