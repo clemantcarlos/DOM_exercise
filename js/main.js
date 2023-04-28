@@ -7,6 +7,7 @@ import themeChanger from "./theme_changer.js"
 import responsiveMedia from "./object_responsive.js"
 import responsiveTester from "./responsive_tester.js"
 import userDeviceInfo from "./device_detection.js"
+import onlineDetector from "./online_detecter.js"
 
 $(document).ready(()=>{
     
@@ -52,6 +53,8 @@ $(document).ready(()=>{
     userDeviceInfo('#user-device')
 })
 
+    onlineDetector()
+
 $(document).keydown((e)=>{
     shortcuts(e);
     moveBall(
@@ -59,6 +62,7 @@ $(document).keydown((e)=>{
         '.ball',
         '.stage'
     );
+    onlineDetector();
 })
 
 
