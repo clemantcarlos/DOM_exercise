@@ -11,9 +11,7 @@ export default function onlineDetector(){
             $('html').prepend($div_offLine)
             setTimeout(()=>$('.offline').remove(),2000)
         }
-
     }
-
     $(window).on('online',(e)=>isOnline())
     $(window).on('offline',(e)=>isOnline())
 }
