@@ -9,6 +9,7 @@ import responsiveTester from "./responsive_tester.js"
 import userDeviceInfo from "./device_detection.js"
 import onlineDetector from "./online_detecter.js"
 import webCam from "./webCam_detection.js"
+import getGeolocation from "./geolocation.js"
 
 $(document).ready(()=>{
     
@@ -53,6 +54,7 @@ $(document).ready(()=>{
     responsiveTester('#tester-form');
     userDeviceInfo('#user-device');
     webCam('#webCam-video')
+    getGeolocation('#geolocationOutput')
 })
 
     onlineDetector()

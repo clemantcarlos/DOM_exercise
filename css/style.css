@@ -218,3 +218,8 @@ header>h1{
 .offline{
     background-color: #b71c1c;
 }
+/* geolocation */
+#geolocationOutput>a{
+    text-decoration: none;
+    color: var(--main-color)
+}
