@@ -17,10 +17,11 @@ export default function getGeolocation(id){
             </ul>
             <a href="https://www.google.com/maps/@${coords.latitude},${coords.longitude},12z" target="_blank" rel="noopener">See position in Google Maps</a>
             `)
-        console.log(position.coords);
     };
     const error = (err)=>{
-        console.log(err);
+        $(id).empty()
+        $(id).text('Location not found')
+
     };
 
     navigator.geolocation.getCurrentPosition

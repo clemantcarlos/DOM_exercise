@@ -10,7 +10,9 @@ import userDeviceInfo from "./device_detection.js"
 import onlineDetector from "./online_detecter.js"
 import webCam from "./webCam_detection.js"
 import getGeolocation from "./geolocation.js"
-
+import searchFilter from "./search_filter.js"
+import getRaffleWinner from "./raffle.js"
+import slider from "./slider.js"
 $(document).ready(()=>{
     
     hamburgerMenu(
@@ -53,8 +55,18 @@ $(document).ready(()=>{
     );
     responsiveTester('#tester-form');
     userDeviceInfo('#user-device');
-    webCam('#webCam-video')
-    getGeolocation('#geolocationOutput')
+    webCam('#webCam-video');
+    getGeolocation('#geolocationOutput');
+    searchFilter(
+        ".card-filter",
+        ".card"
+    );
+    getRaffleWinner(
+        '#btn_raffle',
+        '.raffle_participants',
+        '#winnerDisplay'
+    )
+    slider()
 })
 
     onlineDetector()
